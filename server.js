@@ -1,6 +1,7 @@
 const express = require('express')
 const { default: mongoose } = require('mongoose')
 const user = require('./Routes/user')
+const produit = require('./Routes/produit')
 
 const app = express()
 require('dotenv').config()
@@ -18,6 +19,7 @@ mongoose
 
 
 app.use('/api/user', user)
+app.use('/api/produit', produit) 
 app.listen(PORT, () => {
     console.log("le server est en cours ")
 })  
